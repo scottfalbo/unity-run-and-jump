@@ -20,21 +20,20 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        float jumpVelocity = 4f;
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
-            jumpVelocity = Input.GetKey(KeyCode.LeftShift) &&
+            float jumpVelocity = Input.GetKey(KeyCode.LeftShift) &&
                 ((Input.GetKey(KeyCode.LeftArrow) ||
-                (Input.GetKey(KeyCode.RightArrow)))) ? 5f : 4f;
+                (Input.GetKey(KeyCode.RightArrow)))) ? 18f : 16f;
             rigidBody2d.velocity = Vector2.up * jumpVelocity;
         }
+        
     }
 
     private bool IsGrounded()
     {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider2D.bounds.center,
             boxCollider2D.bounds.size, 0f, Vector2.down, .1f, platformsLayerMask);
-        Debug.Log(raycastHit2D.collider);
         return raycastHit2D.collider != null;
     }
 }
