@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - player
+  - terrain
+  - spawnPoint
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - player
   - foreground
   - background
-  - 
+  - enemy
   - 
   - 
   - 
@@ -39,12 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: background
     uniqueID: 2009331247
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: foreground
     uniqueID: 1467663411
+    locked: 0
+  - name: platform
+    uniqueID: 2733365141
     locked: 0
